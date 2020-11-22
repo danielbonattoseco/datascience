@@ -19,8 +19,7 @@ base.drop_duplicates(subset = ["message"], inplace=True)
 base2 = base.head(1000)
 
 def remover_acentos(txt):
-     txt = normalize('NFKD', txt).encode('ASCII', 'ignore').decode('ASCII')
-     return txt
+     return normalize('NFKD', txt).encode('ASCII', 'ignore').decode('ASCII')
  
 def remove_punctuations(text):
     for punctuation in string.punctuation:

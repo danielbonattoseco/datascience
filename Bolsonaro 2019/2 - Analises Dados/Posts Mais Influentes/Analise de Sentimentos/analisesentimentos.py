@@ -18,12 +18,11 @@ haha = pd.read_csv('Haha/analisesentimentos.csv', delimiter=",")
 
 def calcular_sentimento(text):
     if text < 0.3:
-        resultado = 'Negativo'
+        return 'Negativo'
     elif text > 0.7:
-        resultado = 'Positivo'
+        return 'Positivo'
     else:
-        resultado = 'Neutro'
-    return resultado
+        return 'Neutro'
 
 curtir['situacao'] = curtir['resultado'].apply(calcular_sentimento)
 amei['situacao'] = amei['resultado'].apply(calcular_sentimento)
